@@ -1,6 +1,6 @@
 # hubot-bart-elite
 
-Allows you to query the BART API for real time transit information.
+Allows you to query the BART API for real time transit information.  Get train times for any station, service advisory information as well as elevator advistory information and much more.
 
 See [`src/bart.coffee`](src/bart.coffee) for full documentation.
 

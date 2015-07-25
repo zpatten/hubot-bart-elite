@@ -1,7 +1,7 @@
 {
   "name": "hubot-bart-elite",
-  "description": "Allows you to query the BART API for real time transit information.",
-  "version": "0.0.0",
+  "description": "Allows you to query the BART API for real time transit information.  Get train times for any station, service advisory information as well as elevator advistory information and much more.",
+  "version": "0.9.0",
   "author": "Zachary Patten <zachary@jovelabs.com>",
   "license": "MIT",
 
