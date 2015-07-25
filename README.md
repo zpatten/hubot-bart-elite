@@ -32,7 +32,11 @@ Why paint yourself into a corner?
 ## Examples
 
 `hubot bart stn list` - Lists stations
+
 `hubot bart me mont` - Current train times for Montgomery
+
 `hubot bart me embr` - Current train times for Embarcadero
+
 `hubot bart bsa` - Current BART service advisories
+
 `hubot bart elev` - Current BART elevator advisories.
