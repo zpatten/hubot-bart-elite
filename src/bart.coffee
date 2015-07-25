@@ -2,8 +2,6 @@
 #   Allows you to query the BART API for real time transit information.
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
 #   bart (stn|stns|station|stations) list - Requests a list of all of the BART stations.
 #   bart (stn|stns|station|stations) info <station> - Requests detailed information on the specified station.
 #   bart (stn|stns|station|stations) access <station> - Requests access/neighborhood information for the specified station.
