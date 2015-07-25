@@ -4,25 +4,18 @@
   "version": "0.9.1",
   "author": "Zachary Patten <zachary@jovelabs.com>",
   "license": "MIT",
-
   "keywords": "hubot, hubot-scripts, bart",
-
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-bart-elite.git"
+    "url": "git://github.com/zpatten/hubot-bart-elite.git"
   },
-
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-bart-elite/issues"
+    "url": "https://github.com/zpatten/hubot-bart-elite/issues"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "peerDependencies": {
     "hubot": "2.x"
   },
-
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-script": "1.6.3",
@@ -37,9 +30,7 @@
     "sinon": "^1.13.0",
     "sinon-chai": "^2.7.0"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
