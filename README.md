@@ -17,10 +17,22 @@ Then add **hubot-bart-elite** to your `external-scripts.json`:
   "hubot-bart-elite"
 ]
 ```
+## Commands
 
-## Sample Interaction
+Why paint yourself into a corner?
 
-```
-user1>> hubot hello
-hubot>> hello!
-```
+    bart (stn|stns|station|stations) list - Requests a list of all of the BART stations.
+    bart (stn|stns|station|stations) info <station> - Requests detailed information on the specified station.
+    bart (stn|stns|station|stations) access <station> - Requests access/neighborhood information for the specified station.
+    bart (etd|me) <station> - Requests current departure information.
+    bart ver - Requests current API version information.
+    bart bsa - Requests current advisory information.
+    bart elev - Requests current elevator infromation.
+
+## Examples
+
+`hubot bart stn list` - Lists stations
+`hubot bart me mont` - Current train times for Montgomery
+`hubot bart me embr` - Current train times for Embarcadero
+`hubot bart bsa` - Current BART service advisories
+`hubot bart elev` - Current BART elevator advisories.
