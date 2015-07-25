@@ -1,5 +1,5 @@
 {
-  "name": "hubot-bart",
+  "name": "hubot-bart-elite",
   "description": "Allows you to query the BART API for real time transit information.",
   "version": "0.0.0",
   "author": "Zachary Patten <zachary@jovelabs.com>",
@@ -9,11 +9,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-bart.git"
+    "url": "git://github.com/hubot-scripts/hubot-bart-elite.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-bart/issues"
+    "url": "https://github.com/hubot-scripts/hubot-bart-elite/issues"
   },
 
   "dependencies": {

@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.12.1
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/zpatten/Dropbox/code/personal/hubot-bart-elite',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/zpatten/.npm/hubot-bart-elite/0.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/zpatten/.npm/hubot-bart-elite/0.0.0/package.tgz',
+10 verbose tar pack   '/Users/zpatten/Dropbox/code/personal/hubot-bart-elite' ]
+11 verbose tarball /Users/zpatten/.npm/hubot-bart-elite/0.0.0/package.tgz
+12 verbose folder /Users/zpatten/Dropbox/code/personal/hubot-bart-elite
+13 info prepublish hubot-bart-elite@0.0.0
+14 verbose addLocalTarball adding from inside cache /Users/zpatten/.npm/hubot-bart-elite/0.0.0/package.tgz
+15 silly cache afterAdd hubot-bart-elite@0.0.0
+16 verbose afterAdd /Users/zpatten/.npm/hubot-bart-elite/0.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/zpatten/.npm/hubot-bart-elite/0.0.0/package/package.json written
+18 silly publish { name: 'hubot-bart-elite',
+18 silly publish   description: 'Allows you to query the BART API for real time transit information.',
+18 silly publish   version: '0.0.0',
+18 silly publish   author: { name: 'Zachary Patten', email: 'zachary@jovelabs.com' },
+18 silly publish   license: 'MIT',
+18 silly publish   keywords: [ 'hubot', 'hubot-scripts', 'bart' ],
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git://github.com/hubot-scripts/hubot-bart-elite.git' },
+18 silly publish   bugs: { url: 'https://github.com/hubot-scripts/hubot-bart-elite/issues' },
+18 silly publish   dependencies: {},
+18 silly publish   peerDependencies: { hubot: '2.x' },
+18 silly publish   devDependencies:
+18 silly publish    { chai: '^2.1.1',
+18 silly publish      'coffee-script': '1.6.3',
+18 silly publish      grunt: '^0.4.5',
+18 silly publish      'grunt-cli': '^0.1.13',
+18 silly publish      'grunt-contrib-watch': '~0.6.1',
+18 silly publish      'grunt-mocha-test': '~0.12.7',
+18 silly publish      'grunt-release': '~0.11.0',
+18 silly publish      hubot: '2.x',
+18 silly publish      matchdep: '~0.3.0',
+18 silly publish      mocha: '^2.1.0',
+18 silly publish      sinon: '^1.13.0',
+18 silly publish      'sinon-chai': '^2.7.0' },
+18 silly publish   main: 'index.coffee',
+18 silly publish   scripts: { test: 'grunt test' },
+18 silly publish   readme: '# hubot-bart-elite\n\nAllows you to query the BART API for real time transit information.\n\nSee [`src/bart.coffee`](src/bart.coffee) for full documentation.\n\n## Installation\n\nIn hubot project repo, run:\n\n`npm install hubot-bart-elite --save`\n\nThen add **hubot-bart-elite** to your `external-scripts.json`:\n\n```json\n[\n  "hubot-bart-elite"\n]\n```\n\n## Sample Interaction\n\n```\nuser1>> hubot hello\nhubot>> hello!\n```\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'd9dd8a2e86ee1ad39024d8c23d10bbe98f1b2e42',
+18 silly publish   homepage: 'https://github.com/hubot-scripts/hubot-bart-elite#readme',
+18 silly publish   _id: 'hubot-bart-elite@0.0.0',
+18 silly publish   _shasum: '51db679cd35188f98482a92375800e7a2a51c90e',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name hubot-bart-elite
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/hubot-bart-elite
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/zpatten/.npm/hubot-bart-elite/0.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/hubot-bart-elite
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 16:33:51
+29 verbose request using bearer token for auth
+30 verbose request id b4a1821d931b68ad
+31 http request PUT https://registry.npmjs.org/hubot-bart-elite
+32 http 403 https://registry.npmjs.org/hubot-bart-elite
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '102',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Sat, 25 Jul 2015 23:33:40 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-atl6227-ATL',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1437867220.256162,VS0,VE354' }
+34 verbose request invalidating /Users/zpatten/.npm/registry.npmjs.org/hubot-bart-elite on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish 'hubot-bart-elite'. Are you logged in as the correct user? : hubot-bart-elite
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:197:22)
+36 verbose stack     at Request.emit (events.js:110:17)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+36 verbose stack     at Request.emit (events.js:129:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:996:12)
+36 verbose stack     at IncomingMessage.emit (events.js:129:20)
+36 verbose stack     at _stream_readable.js:908:16
+36 verbose stack     at process._tickCallback (node.js:355:11)
+37 verbose statusCode 403
+38 verbose pkgid hubot-bart-elite
+39 verbose cwd /Users/zpatten/Dropbox/code/personal/hubot-bart-elite
+40 error Darwin 14.4.0
+41 error argv "node" "/usr/local/bin/npm" "publish"
+42 error node v0.12.7
+43 error npm  v2.12.1
+44 error code E403
+45 error You do not have permission to publish 'hubot-bart-elite'. Are you logged in as the correct user? : hubot-bart-elite
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]

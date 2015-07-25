@@ -1,4 +1,4 @@
-# hubot-bart
+# hubot-bart-elite
 
 Allows you to query the BART API for real time transit information.
 
@@ -8,13 +8,13 @@ See [`src/bart.coffee`](src/bart.coffee) for full documentation.
 
 In hubot project repo, run:
 
-`npm install hubot-bart --save`
+`npm install hubot-bart-elite --save`
 
-Then add **hubot-bart** to your `external-scripts.json`:
+Then add **hubot-bart-elite** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-bart"
+  "hubot-bart-elite"
 ]
 ```
 
