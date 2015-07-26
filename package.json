@@ -1,10 +1,10 @@
 {
   "name": "hubot-bart-elite",
   "description": "Allows you to query the BART API for real time transit information.  Get train times for any station, service advisory information as well as elevator advistory information and much more.",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "author": "Zachary Patten <zachary@jovelabs.com>",
   "license": "MIT",
-  "keywords": "hubot, hubot-scripts, bart",
+  "keywords": "hubot, hubot-scripts, bart, bay, area, rapid, transit, train, schedule, sf, san, francisco",
   "repository": {
     "type": "git",
     "url": "git://github.com/zpatten/hubot-bart-elite.git"
