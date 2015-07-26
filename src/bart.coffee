@@ -10,17 +10,20 @@
 #   bart bsa - Requests current advisory information.
 #   bart elev - Requests current elevator infromation.
 #
-# Notes:
-#   Output text is currently optimized for Slack.
+# Configuration:
+#   HUBOT_BART_ELITE_SLACK - Optimize output text for Slack.
 #
 # Author:
 #   Zachary Patten <zachary@jovelabs.com>
+
 
 xml2js = require('xml2js')
 util = require('util')
 
 bart_api_key = "MW9S-E7SL-26DU-VV8V"
 bart_api_url = "http://api.bart.gov/api/"
+
+output_slack = process.env.HUBOT_BART_ELITE_SLACK
 
 module.exports = (robot) ->
 
@@ -42,7 +45,7 @@ module.exports = (robot) ->
         return msg.send format_bart_api_warning(json) if is_bart_api_warning(json)
 
         strings.push "*BART ADVISORY INFORMATION*"
-        strings.push "```"
+        strings.push "```" if output_slack
         if json['root']['bsa']
           if json['root']['bsa'] instanceof Array
             for bsa in json['root']['bsa']
@@ -51,7 +54,7 @@ module.exports = (robot) ->
             strings.push format_bart_bsa(json['root']['bsa'])
         else
           strings.push "No advisory information is available at this time!"
-        strings.push "```"
+        strings.push "```" if output_slack
         msg.send strings.join('\n')
 
 
@@ -66,7 +69,7 @@ module.exports = (robot) ->
         return msg.send format_bart_api_warning(json) if is_bart_api_warning(json)
 
         strings.push "*BART ELEVATOR INFORMATION*"
-        strings.push "```"
+        strings.push "```" if output_slack
         if json['root']['bsa']
           if json['root']['bsa'] instanceof Array
             for bsa in json['root']['bsa']
@@ -75,7 +78,7 @@ module.exports = (robot) ->
             strings.push format_bart_bsa(json['root']['bsa'])
         else
           strings.push "No elevator information is available at this time!"
-        strings.push "```"
+        strings.push "```" if output_slack
         msg.send strings.join('\n')
 
 
@@ -93,10 +96,10 @@ module.exports = (robot) ->
           return msg.send format_bart_api_warning(json) if is_bart_api_warning(json)
 
           strings.push "*BART STATION LIST*"
-          strings.push "```"
+          strings.push "```" if output_slack
           for station in json['root']['stations'][0]['station']
             strings.push "  #{station['abbr'][0]} - #{station['name'][0]} (#{station['address'][0]}, #{station['city'][0]}, #{station['state'][0]} #{station['zipcode'][0]})"
-          strings.push "```"
+          strings.push "```" if output_slack
           msg.send strings.join('\n')
 
     if action.match /info/i
@@ -111,7 +114,7 @@ module.exports = (robot) ->
 
           info = json['root']['stations'][0]['station'][0]
           strings.push "===== BART STATION INFORMATION ====="
-          strings.push "```"
+          strings.push "```" if output_slack
           strings.push "#{info['name']} (#{info['abbr']}) [#{info['link']}]"
           strings.push "#{info['address']}"
           strings.push "#{info['city']}, #{info['state']}  #{info['zipcode']}"
@@ -131,7 +134,7 @@ module.exports = (robot) ->
           strings.push "#{info['name']} Food: #{info['food']}" if info['food']
           strings.push "#{info['name']} Shopping: #{info['shopping']}" if info['shopping']
           strings.push "#{info['name']} Attractions: #{info['attraction']}" if info['attraction']
-          strings.push "```"
+          strings.push "```" if output_slack
           msg.send strings.join('\n')
 
     if action.match /access/i
@@ -157,11 +160,11 @@ module.exports = (robot) ->
         return msg.send format_bart_api_warning(json) if is_bart_api_warning(json)
 
         strings = []
-        strings.push "```"
+        strings.push "```" if output_slack
         strings.push "API Version: #{json['root']['apiVersion']}"
         strings.push "Copyright: #{json['root']['copyright']}"
         strings.push "License: #{json['root']['license']}"
-        strings.push "```"
+        strings.push "```" if output_slack
         msg.send strings.join('\n')
 
 
@@ -176,7 +179,7 @@ module.exports = (robot) ->
         strings = []
         for station in json['root']['station']
           strings.push "*BART ESTIMATED DEPARTURES FOR #{station['abbr'][0].toUpperCase()}* (#{station['name'][0].toUpperCase()})"
-          strings.push "```"
+          strings.push "```" if output_slack
           if station['etd'] instanceof Array
             for etd in station['etd']
               strings.push process_bart_etd etd
@@ -185,7 +188,7 @@ module.exports = (robot) ->
               strings.push process_bart_etd station['etd']
             else
               strings.push "No trains running!"
-          strings.push "```"
+          strings.push "```" if output_slack
         msg.send strings.join('\n')
 
 
