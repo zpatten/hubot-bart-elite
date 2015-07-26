@@ -17,6 +17,11 @@ Then add **hubot-bart-elite** to your `external-scripts.json`:
   "hubot-bart-elite"
 ]
 ```
+
+## Configuration
+
+`HUBOT_BART_ELITE_SLACK` - Optimize output text for Slack; set to any value.
+
 ## Commands
 
 Why paint yourself into a corner?
