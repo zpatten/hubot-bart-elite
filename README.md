@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/hubot-bart-elite.svg)](http://badge.fury.io/js/hubot-bart-elite)
+
 # hubot-bart-elite
 
 Allows you to query the BART API for real time transit information.  Get train times for any station, service advisory information as well as elevator advistory information and much more.
